@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="title">Selecione o Tipo de Template</h2>
+    
+    <div class="cards-container">
+        <div class="template-card" (click)="selecionarTipo('email')">
+            <h3>E-mail</h3>
+            <i class="fas fa-envelope"></i>
+            <p>Crie templates personalizados para suas campanhas de e-mail marketing</p>
+        </div>
+
+        <div class="template-card" (click)="selecionarTipo('whatsapp')">
+            <h3>WhatsApp</h3>
+            <i class="fab fa-whatsapp"></i>
+            <p>Desenvolva mensagens para comunicação direta via WhatsApp</p>
+        </div>
+
+        <div class="template-card disabled" title="Em breve">
+            <h3>SMS</h3>
+            <i class="fas fa-sms"></i>
+            <p>Configure mensagens curtas e objetivas para SMS</p>
+            <span class="coming-soon">Em breve</span>
+        </div>
+
+        <div class="template-card disabled" title="Em breve">
+            <h3>Push</h3>
+            <i class="fas fa-bell"></i>
+            <p>Crie notificações push para engajar seus usuários</p>
+            <span class="coming-soon">Em breve</span>
+        </div>
+    </div>
+</div> 
+

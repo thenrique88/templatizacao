@@ -1,0 +1,68 @@
+.template-email-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.floating-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.125);
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #e9ecef;
+    }
+}
+
+.item-container {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    &:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    &:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+mat-expansion-panel {
+    margin-bottom: 10px;
+}
+
+.acoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}

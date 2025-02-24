@@ -1,0 +1,189 @@
+<div class="container template-email-container">
+    <h2 class="mb-4">Template de E-mail</h2>
+
+    <!-- Conteúdo Principal -->
+    <div class="card floating-card mb-4">
+        <div class="card-header" (click)="toggleCollapse('conteudoPrincipal')" style="cursor: pointer;">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Conteúdo Principal</h5>
+                <i class="bi" [ngClass]="isCollapsed['conteudoPrincipal'] ? 'bi-chevron-down' : 'bi-chevron-up'"></i>
+            </div>
+        </div>
+        <div class="collapse show" id="conteudoPrincipal" #conteudoPrincipalCollapse="ngbCollapse" [ngbCollapse]="isCollapsed['conteudoPrincipal']">
+            <div class="card-body">
+                <form [formGroup]="conteudoPrincipalForm">
+                    <div class="mb-3">
+                        <label class="form-label">ID Template</label>
+                        <input type="text" class="form-control" formControlName="idTemplate">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Versão Template</label>
+                        <input type="text" class="form-control" formControlName="versaoTemplate">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tema da Campanha</label>
+                        <input type="text" class="form-control" formControlName="temaCampanha">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Assunto do E-mail</label>
+                        <input type="text" class="form-control" formControlName="assuntoEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Pré-Header</label>
+                        <input type="text" class="form-control" formControlName="preHeader">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Principal -->
+    <div class="card floating-card mb-4">
+        <div class="card-header" (click)="toggleCollapse('bannerPrincipal')" style="cursor: pointer;">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Banner Principal</h5>
+                <i class="bi" [ngClass]="isCollapsed['bannerPrincipal'] ? 'bi-chevron-down' : 'bi-chevron-up'"></i>
+            </div>
+        </div>
+        <div class="collapse" id="bannerPrincipal" #bannerPrincipalCollapse="ngbCollapse" [ngbCollapse]="isCollapsed['bannerPrincipal']">
+            <div class="card-body">
+                <form [formGroup]="bannerPrincipalForm">
+                    <div class="mb-3">
+                        <label class="form-label">Imagem Principal (BP_Imagem)</label>
+                        <input type="text" class="form-control" formControlName="bpImagem">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Texto Principal (BP_Texto)</label>
+                        <input type="text" class="form-control" formControlName="bpTexto">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Botão Principal (BP_Botao)</label>
+                        <input type="text" class="form-control" formControlName="bpBotao">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Link Principal (BP_Link)</label>
+                        <input type="text" class="form-control" formControlName="bpLink">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Secundário -->
+    <div class="card floating-card mb-4">
+        <div class="card-header" (click)="toggleCollapse('bannerSecundario')" style="cursor: pointer;">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Banner Secundário</h5>
+                <i class="bi" [ngClass]="isCollapsed['bannerSecundario'] ? 'bi-chevron-down' : 'bi-chevron-up'"></i>
+            </div>
+        </div>
+        <div class="collapse" id="bannerSecundario" #bannerSecundarioCollapse="ngbCollapse" [ngbCollapse]="isCollapsed['bannerSecundario']">
+            <div class="card-body">
+                <form [formGroup]="bannerSecundarioForm">
+                    <div class="mb-3">
+                        <label class="form-label">Imagem Principal (BS_Imagem)</label>
+                        <input type="text" class="form-control" formControlName="bsImagem">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Texto Principal (BS_Texto)</label>
+                        <input type="text" class="form-control" formControlName="bsTexto">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Botão Principal (BS_Botao)</label>
+                        <input type="text" class="form-control" formControlName="bsBotao">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Link Principal (BS_Link)</label>
+                        <input type="text" class="form-control" formControlName="bsLink">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Coringa -->
+    <div class="card floating-card mb-4">
+        <div class="card-header" (click)="toggleCollapse('bannerCoringa')" style="cursor: pointer;">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Banner Coringa</h5>
+                <i class="bi" [ngClass]="isCollapsed['bannerCoringa'] ? 'bi-chevron-down' : 'bi-chevron-up'"></i>
+            </div>
+        </div>
+        <div class="collapse" id="bannerCoringa" #bannerCoringaCollapse="ngbCollapse" [ngbCollapse]="isCollapsed['bannerCoringa']">
+            <div class="card-body">
+                <form [formGroup]="bannerCoringaForm">
+                    <div class="mb-3">
+                        <label class="form-label">Imagem Principal (BC_Imagem)</label>
+                        <input type="text" class="form-control" formControlName="bcImagem">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Texto Principal (BC_Texto)</label>
+                        <input type="text" class="form-control" formControlName="bcTexto">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Botão Principal (BC_Botao)</label>
+                        <input type="text" class="form-control" formControlName="bcBotao">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Link Principal (BP_Link)</label>
+                        <input type="text" class="form-control" formControlName="bcLink">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Itens -->
+    <div class="card floating-card mb-4">
+        <div class="card-header" (click)="toggleCollapse('itens')" style="cursor: pointer;">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Itens</h5>
+                <i class="bi" [ngClass]="isCollapsed['itens'] ? 'bi-chevron-down' : 'bi-chevron-up'"></i>
+            </div>
+        </div>
+        <div class="collapse" id="itens" #itensCollapse="ngbCollapse" [ngbCollapse]="isCollapsed['itens']">
+            <div class="card-body">
+                <form [formGroup]="itensForm">
+                    <div formArrayName="items">
+                        <div *ngFor="let item of itensFormArray.controls; let i=index" [formGroupName]="i" 
+                             class="item-container mb-4 p-3 border rounded">
+                            <div class="mb-3">
+                                <label class="form-label">Imagem</label>
+                                <input type="text" class="form-control" formControlName="imagem">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Título</label>
+                                <input type="text" class="form-control" formControlName="titulo">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Texto</label>
+                                <input type="text" class="form-control" formControlName="texto">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Botão</label>
+                                <input type="text" class="form-control" formControlName="botao">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Link</label>
+                                <input type="text" class="form-control" formControlName="link">
+                            </div>
+                            <button type="button" class="btn btn-danger" (click)="removerItem(i)">
+                                <i class="bi bi-trash"></i> Remover
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3" (click)="adicionarItem()" 
+                            [disabled]="itensFormArray.length >= 4">
+                        <i class="bi bi-plus"></i> Adicionar Item
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-end mt-4">
+        <button type="button" class="btn btn-primary" (click)="salvarTemplate()">
+            Salvar Template
+        </button>
+    </div>
+</div>
